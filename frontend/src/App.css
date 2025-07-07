@@ -1,0 +1,146 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dashboard {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #f9f9f9 0%, #e3e6f3 100%);
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 2rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+}
+
+.dashboard-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.health {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  padding: 0.3em 1em;
+  border-radius: 1em;
+  font-weight: 500;
+  display: inline-block;
+}
+.health-ok { background: #e6fbe6; color: #2ecc40; border: 1px solid #2ecc40; }
+.health-loading { background: #fffbe6; color: #b59f00; border: 1px solid #b59f00; }
+.health-down { background: #fbe6e6; color: #e74c3c; border: 1px solid #e74c3c; }
+
+main {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tick-table {
+  width: 100%;
+  max-width: 700px;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tick-table th, .tick-table td {
+  padding: 0.8em 1.2em;
+  text-align: center;
+}
+.tick-table th {
+  background: #34495e;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.tick-table tr:nth-child(even) {
+  background: #f4f8fb;
+}
+.tick-table tr:hover {
+  background: #e3e6f3;
+}
+
+@media (max-width: 600px) {
+  .dashboard-header h1 {
+    font-size: 1.2rem;
+  }
+  .tick-table th, .tick-table td {
+    padding: 0.5em 0.3em;
+    font-size: 0.95em;
+  }
+  main {
+    padding: 1rem 0.2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dashboard {
+    background: linear-gradient(120deg, #23272f 0%, #2c3e50 100%);
+    color: #f9f9f9;
+  }
+  .dashboard-header {
+    background: #181c22;
+    color: #f9f9f9;
+  }
+  .tick-table {
+    background: #23272f;
+    color: #f9f9f9;
+  }
+  .tick-table th {
+    background: #181c22;
+    color: #fff;
+  }
+  .tick-table tr:nth-child(even) {
+    background: #23272f;
+  }
+  .tick-table tr:hover {
+    background: #34495e;
+  }
+}

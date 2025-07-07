@@ -213,6 +213,29 @@ This project demonstrates:
 
 <hr/>
 
+<h2>🆕 New API Endpoints</h2>
+<ul>
+  <li><strong>GET <code>/market_data</code></strong>: Returns the last 100 market ticks as a JSON array.</li>
+  <li><strong>WebSocket <code>/ws/market_data</code></strong>: Streams live market ticks to connected clients in real time.</li>
+</ul>
+
+<h2>🖥️ Frontend Dashboard</h2>
+<ul>
+  <li>Modern React-based dashboard (see <code>frontend/</code> directory).</li>
+  <li>Displays live market data in a beautiful, responsive table.</li>
+  <li>Health check indicator for backend status.</li>
+  <li>Supports both historical (last 100 ticks) and real-time updates via WebSocket.</li>
+  <li>Dark/light mode support and mobile-friendly design.</li>
+</ul>
+
+<h3>How to Use the API</h3>
+<ul>
+  <li>To fetch recent ticks: <code>curl http://localhost:8000/market_data</code></li>
+  <li>To receive live updates: connect to <code>ws://localhost:8000/ws/market_data</code> using a WebSocket client.</li>
+</ul>
+
+<hr/>
+
 <p align="center">🚀 Happy Coding!</p>
 
 </body>
