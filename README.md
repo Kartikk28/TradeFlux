@@ -199,6 +199,16 @@ This project demonstrates:
 
 <hr/>
 
+## Running the Project
+
+1. Clone the repository
+   
+   ```git clone https://github.com/Kartikk28/TradeFlux.git```
+   ```cd TradeFlux```
+   
+2. Install Dependencies
+    ```pip install -r requirements.txt```
+   
 <p align="center">🚀 Happy Coding!</p>
 
 </body>
