@@ -235,7 +235,7 @@ ply @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/ply_169923
 prometheus-client @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/prometheus_client_1699242791845/work
 prompt-toolkit @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_c63v4kqjzr/croot/prompt-toolkit_1704404354115/work
 Protego @ file:///tmp/build/80754af9/protego_1598657180827/work
-protobuf==4.25.3
+protobuf==4.25.8
 psutil @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/psutil_1699248249804/work
 ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
 pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
@@ -321,7 +321,7 @@ semver @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_99u
 Send2Trash @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/send2trash_1701803532643/work
 sentry-sdk==2.32.0
 service-identity @ file:///Users/ktietz/demo/mc3/conda-bld/service_identity_1629460757137/work
-setuptools==75.1.0
+setuptools==78.1.1
 shellingham @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/shellingham_1699238695807/work
 sip @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/sip_1699238710791/work
 six @ file:///tmp/build/80754af9/six_1644875935023/work
@@ -342,7 +342,7 @@ spyder @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_892
 spyder-kernels @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_42vj8220mm/croot/spyder-kernels_1707937716590/work
 SQLAlchemy @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_3frqduvs8h/croot/sqlalchemy_1725885054432/work
 stack-data @ file:///opt/conda/conda-bld/stack_data_1646927590127/work
-starlette==0.46.2
+starlette==0.47.2
 statsmodels @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_af8vmuwbis/croot/statsmodels_1718381196260/work
 streamlit @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_52t8o6xfs8/croot/streamlit_1724335169234/work
 sympy @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_12ufyeicwp/croot/sympy_1724938200081/work
