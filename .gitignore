@@ -1,0 +1,51 @@
+# ─── Environment / secrets ──────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.env
+
+# ─── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+*.pyc
+
+# ─── Node / Frontend ────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+node_modules/
+dist/
+
+# ─── Docker / infra ─────────────────────────────────────────────────────────
+*.log
+*.pid
+*.seed
+
+# ─── OS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── IDE ────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ─── PostgreSQL / Kafka data volumes ────────────────────────────────────────
+pg_data/
+kafka_data/
+zookeeper_data/
