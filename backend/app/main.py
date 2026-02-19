@@ -13,6 +13,7 @@ from .db import (
 )
 from .ws_manager import WSManager
 from .kafka_consumer import Ingestor
+from .mock_ingestor import MockIngestor
 
 
 app = FastAPI(title="TradeFlux API")
@@ -26,7 +27,14 @@ if settings.allow_cors:
     )
 
 manager = WSManager()
-ingestor = Ingestor(manager)
+
+# Choose ingestor based on MARKET_DATA_PROVIDER setting.
+# "mock"   → built-in random-walk generator (no Kafka needed, works on Railway)
+# anything else → Kafka consumer (requires KAFKA_BOOTSTRAP to be reachable)
+if settings.market_data_provider == "mock":
+    ingestor: Ingestor | MockIngestor = MockIngestor(manager)
+else:
+    ingestor = Ingestor(manager)
 
 
 @app.on_event("startup")
