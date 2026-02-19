@@ -6,6 +6,14 @@
   "outputDirectory": "frontend/dist",
   "installCommand": "cd frontend && npm install",
   "framework": null,
+  "env": {
+    "VITE_API_URL": "https://tradeflux-production.up.railway.app"
+  },
+  "build": {
+    "env": {
+      "VITE_API_URL": "https://tradeflux-production.up.railway.app"
+    }
+  },
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],
