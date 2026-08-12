@@ -70,13 +70,3 @@ class Ingestor:
             return arr[idx]
 
         return (percentile(50), percentile(95))
-
-    def p50_p95(self):
-        if not self.latencies:
-            return (None, None)
-        arr = sorted(self.latencies)
-        def percentile(p):
-            idx = int(len(arr) * p / 100)
-            idx = min(max(idx, 0), len(arr)-1)
-            return arr[idx]
-        return (percentile(50), percentile(95))
