@@ -63,10 +63,16 @@ services:
       kafka:
         condition: service_healthy
     entrypoint: ["/bin/bash", "-c"]
-    command: >
-      "kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists
-       --topic tradeflux.ticks --partitions 1 --replication-factor 1 &&
-       echo 'Topic ready.'"
+    # `command` must be a one-element list, not a bare folded scalar: with a
+    # plain string, the leading/trailing double quotes below became literal
+    # characters passed to `bash -c` (they don't get stripped by YAML folding),
+    # producing a single unparseable "word" and a `--topic: command not found`
+    # error. As a list, Compose passes exactly one clean arg to `-c`.
+    command:
+      - >
+        kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists
+        --topic tradeflux.ticks --partitions 1 --replication-factor 1 &&
+        echo 'Topic ready.'
     restart: "no"
 
   # ── Tick Producer (mock data) ──────────────────────────────────────────────
@@ -106,7 +112,12 @@ services:
     env_file:
       - ../.env
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8000/api/health || exit 1"]
+      # curl isn't installed in the python:3.11-slim base image (backend/Dockerfile
+      # doesn't add it), so a curl-based healthcheck fails with "executable file
+      # not found" every time and the container is permanently marked unhealthy —
+      # which then hangs `frontend`'s `depends_on: condition: service_healthy`
+      # forever. Use Python's stdlib instead; it's already there.
+      test: ["CMD", "python", "-c", "import urllib.request as u; u.urlopen('http://localhost:8000/api/health', timeout=3)"]
       interval: 10s
       timeout: 5s
       retries: 10
